@@ -1,0 +1,2139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Walo Enterprises — Integrated IT Services, Consulting, Trade, and Import & Export Solutions. Melbourne, Australia." />
+  <title>Walo Enterprises</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <style>
+    :root {
+      --bg-primary: #050505;
+      --bg-secondary: #0f0f0f;
+      --bg-elevated: #141414;
+      --accent: #cc0000;
+      --accent-hover: #ff3333;
+      --accent-soft: #e53935;
+      --accent-dim: rgba(204, 0, 0, 0.45);
+      --text: #ffffff;
+      --text-muted: #c4c4c4;
+      --border: #330000;
+      --card: #1a1a1a;
+      --max: 1240px;
+      --radius: 10px;
+      --header-h: 76px;
+    }
+
+    *,
+    *::before,
+    *::after {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      scroll-padding-top: var(--header-h);
+    }
+
+    body {
+      margin: 0;
+      font-family: "Inter", system-ui, -apple-system, sans-serif;
+      background: var(--bg-primary);
+      color: var(--text);
+      line-height: 1.65;
+      overflow-x: hidden;
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      html {
+        scroll-behavior: auto;
+      }
+      *,
+      *::before,
+      *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+      }
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+      transition: color 0.2s ease;
+    }
+
+    a:hover {
+      color: var(--accent-hover);
+    }
+
+    .container {
+      width: 100%;
+      max-width: var(--max);
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+
+    /* Header */
+    .site-header {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      background: rgba(5, 5, 5, 0.88);
+      backdrop-filter: blur(16px);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .header-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: var(--header-h);
+      gap: 1rem;
+    }
+
+    .logo {
+      font-weight: 900;
+      font-size: 1.05rem;
+      letter-spacing: -0.03em;
+      color: var(--text);
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .logo span {
+      color: var(--accent);
+    }
+
+    .header-meta {
+      display: none;
+      align-items: center;
+      gap: 1.25rem;
+      font-size: 0.8125rem;
+      color: var(--text-muted);
+    }
+
+    .header-meta a {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      font-weight: 500;
+      color: var(--text-muted);
+    }
+
+    .header-meta a i {
+      color: var(--accent);
+      font-size: 0.9rem;
+    }
+
+    @media (min-width: 1100px) {
+      .header-meta {
+        display: flex;
+      }
+    }
+
+    .nav-desktop {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+    }
+
+    .nav-desktop a {
+      font-weight: 600;
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      color: var(--text-muted);
+      position: relative;
+      padding: 0.35rem 0;
+    }
+
+    .nav-desktop a:hover,
+    .nav-desktop a.active {
+      color: var(--accent-hover);
+    }
+
+    .nav-desktop a.active::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: -2px;
+      height: 2px;
+      background: var(--accent);
+      border-radius: 1px;
+    }
+
+    .header-actions {
+      display: flex;
+      align-items: center;
+      gap: 0.65rem;
+      padding: 6px 2px;
+      position: relative;
+      z-index: 2;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.5rem;
+      padding: 0.7rem 1.2rem;
+      font-family: inherit;
+      font-weight: 700;
+      font-size: 0.8125rem;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      border: none;
+      border-radius: var(--radius);
+      cursor: pointer;
+      position: relative;
+      z-index: 0;
+      text-decoration: none;
+      transition: background 0.25s ease, color 0.25s ease, box-shadow 0.25s ease, border-color 0.2s ease;
+    }
+
+    .btn:hover,
+    .btn:focus-visible {
+      z-index: 4;
+    }
+
+    .btn-primary {
+      background: var(--accent);
+      color: var(--text);
+      border: 1px solid rgba(0, 0, 0, 0.35);
+    }
+
+    .btn-primary:hover,
+    .btn-primary:focus-visible {
+      background: var(--accent-hover);
+      color: #ffffff;
+      box-shadow: 0 0 28px rgba(204, 0, 0, 0.5), 0 6px 20px rgba(0, 0, 0, 0.45);
+    }
+
+    .btn-ghost {
+      background: rgba(255, 255, 255, 0.03);
+      color: var(--text-muted);
+      border: 1px solid var(--border);
+    }
+
+    .btn-ghost:hover,
+    .btn-ghost:focus-visible {
+      color: #ffffff;
+      border-color: var(--accent);
+      background: rgba(204, 0, 0, 0.12);
+      box-shadow: 0 0 0 1px rgba(204, 0, 0, 0.25), 0 8px 24px rgba(0, 0, 0, 0.35);
+    }
+
+    .menu-toggle {
+      display: none;
+      width: 44px;
+      height: 44px;
+      align-items: center;
+      justify-content: center;
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      color: var(--text);
+      cursor: pointer;
+      transition: border-color 0.2s, color 0.2s;
+    }
+
+    .menu-toggle:hover {
+      border-color: var(--accent);
+      color: var(--accent-hover);
+    }
+
+    .nav-mobile {
+      display: none;
+      flex-direction: column;
+      gap: 0;
+      padding: 0 24px 1rem;
+      border-bottom: 1px solid var(--border);
+      background: var(--bg-secondary);
+    }
+
+    .nav-mobile.open {
+      display: flex;
+    }
+
+    .nav-mobile a {
+      padding: 1rem 0;
+      border-top: 1px solid var(--border);
+      font-weight: 600;
+      font-size: 0.875rem;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      color: var(--text-muted);
+    }
+
+    .nav-mobile a:first-child {
+      border-top: none;
+    }
+
+    .nav-mobile a:hover,
+    .nav-mobile a.active {
+      color: var(--accent-hover);
+    }
+
+    @media (max-width: 1024px) {
+      .nav-desktop {
+        display: none;
+      }
+
+      .menu-toggle {
+        display: inline-flex;
+      }
+    }
+
+    /* Hero */
+    .hero {
+      position: relative;
+      min-height: calc(100vh - var(--header-h));
+      min-height: calc(100dvh - var(--header-h));
+      display: flex;
+      align-items: center;
+      padding: 3.5rem 0 4.5rem;
+      border-bottom: 1px solid var(--border);
+      overflow: visible;
+    }
+
+    .hero-grid {
+      position: absolute;
+      inset: -20%;
+      background-image:
+        linear-gradient(rgba(204, 0, 0, 0.07) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(204, 0, 0, 0.07) 1px, transparent 1px);
+      background-size: 64px 64px;
+      transform: perspective(800px) rotateX(12deg);
+      transform-origin: center top;
+      animation: gridDrift 28s linear infinite;
+      opacity: 0.5;
+      pointer-events: none;
+    }
+
+    @keyframes gridDrift {
+      0% {
+        transform: perspective(800px) rotateX(12deg) translateY(0);
+      }
+      100% {
+        transform: perspective(800px) rotateX(12deg) translateY(64px);
+      }
+    }
+
+    .hero::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background:
+        radial-gradient(ellipse 90% 60% at 70% 0%, rgba(204, 0, 0, 0.35), transparent 55%),
+        radial-gradient(ellipse 70% 50% at 10% 80%, rgba(204, 0, 0, 0.12), transparent 50%),
+        linear-gradient(180deg, rgba(51, 0, 0, 0.55) 0%, transparent 45%, rgba(0, 0, 0, 0.85) 100%);
+      animation: heroPulse 14s ease-in-out infinite alternate;
+      pointer-events: none;
+    }
+
+    @keyframes heroPulse {
+      0% {
+        opacity: 0.85;
+        filter: saturate(1);
+      }
+      100% {
+        opacity: 1;
+        filter: saturate(1.15);
+      }
+    }
+
+    .hero-orbit {
+      position: absolute;
+      width: min(90vw, 720px);
+      height: min(90vw, 720px);
+      right: -18%;
+      top: 50%;
+      transform: translateY(-50%);
+      border: 1px solid rgba(204, 0, 0, 0.12);
+      border-radius: 50%;
+      pointer-events: none;
+      animation: orbitSpin 48s linear infinite;
+    }
+
+    .hero-orbit::after {
+      content: "";
+      position: absolute;
+      inset: 12%;
+      border: 1px dashed rgba(204, 0, 0, 0.15);
+      border-radius: 50%;
+    }
+
+    @keyframes orbitSpin {
+      to {
+        transform: translateY(-50%) rotate(360deg);
+      }
+    }
+
+    .hero-inner {
+      position: relative;
+      z-index: 2;
+      max-width: 56rem;
+    }
+
+    .hero-eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.35rem 0.85rem;
+      border-radius: 999px;
+      border: 1px solid var(--border);
+      background: rgba(0, 0, 0, 0.45);
+      font-size: 0.75rem;
+      font-weight: 700;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--text-muted);
+      margin-bottom: 1.25rem;
+      animation: fadeUp 0.9s ease both;
+    }
+
+    .hero-eyebrow i {
+      color: var(--accent);
+    }
+
+    .hero-top {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: flex-start;
+      justify-content: space-between;
+      gap: 1rem;
+      margin-bottom: 1.25rem;
+    }
+
+    .hero-brand {
+      font-size: clamp(1.75rem, 5vw, 3rem);
+      font-weight: 900;
+      letter-spacing: -0.04em;
+      margin: 0;
+      line-height: 1.05;
+      animation: fadeUp 0.85s ease 0.08s both;
+    }
+
+    .hero-brand .accent {
+      color: var(--accent);
+    }
+
+    .hero h1 {
+      font-size: clamp(1.2rem, 2.8vw, 1.85rem);
+      font-weight: 700;
+      line-height: 1.3;
+      margin: 0 0 1.25rem;
+      color: #f2f2f2;
+      animation: fadeUp 0.9s ease 0.16s both;
+    }
+
+    .hero-lead {
+      font-size: 1.0625rem;
+      color: var(--text-muted);
+      max-width: 40rem;
+      margin: 0 0 1.75rem;
+      animation: fadeUp 0.95s ease 0.22s both;
+    }
+
+    @keyframes fadeUp {
+      from {
+        opacity: 0;
+        transform: translateY(22px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .hero-cta-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.75rem;
+      align-items: center;
+      margin-bottom: 2rem;
+      padding: 8px 4px 12px;
+      position: relative;
+      z-index: 2;
+      isolation: isolate;
+      animation: fadeUp 1s ease 0.28s both;
+    }
+
+    .hero-trust {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem 1.75rem;
+      padding-top: 1.5rem;
+      border-top: 1px solid rgba(51, 0, 0, 0.85);
+      animation: fadeUp 1.05s ease 0.34s both;
+    }
+
+    .hero-trust-item {
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+      font-size: 0.8125rem;
+      font-weight: 600;
+      color: var(--text-muted);
+    }
+
+    .hero-trust-item i {
+      color: var(--accent);
+      font-size: 1.1rem;
+    }
+
+    /* Ticker */
+    .ticker-wrap {
+      border-bottom: 1px solid var(--border);
+      background: linear-gradient(90deg, #0a0000, #0a0a0a, #0a0000);
+      overflow: hidden;
+    }
+
+    .ticker {
+      display: flex;
+      gap: 3rem;
+      padding: 0.85rem 0;
+      white-space: nowrap;
+      animation: tickerMove 32s linear infinite;
+      font-size: 0.75rem;
+      font-weight: 800;
+      letter-spacing: 0.28em;
+      text-transform: uppercase;
+      color: rgba(255, 255, 255, 0.55);
+    }
+
+    .ticker span {
+      color: var(--accent-soft);
+    }
+
+    @keyframes tickerMove {
+      0% {
+        transform: translateX(0);
+      }
+      100% {
+        transform: translateX(-50%);
+      }
+    }
+
+    .ticker-inner {
+      display: flex;
+      gap: 3rem;
+    }
+
+    /* Stats */
+    #capabilities {
+      padding: 3.5rem 0 2rem;
+      border-bottom: 1px solid var(--border);
+      background: radial-gradient(ellipse 120% 80% at 50% 0%, rgba(204, 0, 0, 0.08), transparent 55%), var(--bg-secondary);
+    }
+
+    .stats-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.25rem;
+    }
+
+    @media (max-width: 720px) {
+      .stats-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .stat-card {
+      position: relative;
+      padding: 1.75rem 1.5rem;
+      border-radius: var(--radius);
+      background: linear-gradient(145deg, #181818, #101010);
+      border: 1px solid var(--border);
+      overflow: hidden;
+      box-shadow: 0 12px 40px rgba(0, 0, 0, 0.45);
+    }
+
+    .stat-card::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      z-index: 0;
+      pointer-events: none;
+      background: linear-gradient(120deg, transparent, rgba(204, 0, 0, 0.08), transparent);
+      transform: translateX(-100%);
+      animation: statSheen 6s ease-in-out infinite;
+    }
+
+    .stat-card > * {
+      position: relative;
+      z-index: 1;
+    }
+
+    @keyframes statSheen {
+      0%,
+      100% {
+        transform: translateX(-100%);
+      }
+      50% {
+        transform: translateX(100%);
+      }
+    }
+
+    .stat-value {
+      font-size: clamp(2.25rem, 4vw, 3rem);
+      font-weight: 900;
+      letter-spacing: -0.03em;
+      color: var(--text);
+      line-height: 1;
+      margin-bottom: 0.35rem;
+    }
+
+    .stat-value .suffix {
+      font-size: 0.45em;
+      font-weight: 800;
+      color: var(--accent-soft);
+      margin-left: 0.1em;
+    }
+
+    .stat-label {
+      font-size: 0.8125rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      color: var(--text-muted);
+    }
+
+    .stat-desc {
+      margin: 0.75rem 0 0;
+      font-size: 0.875rem;
+      color: #9a9a9a;
+      line-height: 1.5;
+    }
+
+    /* Pillars */
+    .pillars {
+      padding: 3rem 0 4rem;
+      border-bottom: 1px solid var(--border);
+      background: var(--bg-primary);
+    }
+
+    .section-kicker {
+      font-size: 0.75rem;
+      font-weight: 800;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin: 0 0 0.5rem;
+    }
+
+    .section-title {
+      font-size: clamp(1.75rem, 3vw, 2.35rem);
+      font-weight: 900;
+      letter-spacing: -0.03em;
+      margin: 0 0 2rem;
+      max-width: 20ch;
+    }
+
+    .pillar-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.25rem;
+      padding: 10px 4px;
+    }
+
+    @media (max-width: 900px) {
+      .pillar-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .pillar-card {
+      padding: 1.75rem 1.5rem;
+      border-radius: var(--radius);
+      background: var(--card);
+      border: 1px solid var(--border);
+      transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .pillar-card:hover {
+      transform: translateY(-6px);
+      border-color: rgba(204, 0, 0, 0.45);
+      box-shadow: 0 16px 48px rgba(204, 0, 0, 0.12);
+    }
+
+    .pillar-card h3 {
+      margin: 0 0 0.75rem;
+      font-size: 1.05rem;
+      font-weight: 800;
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+    }
+
+    .pillar-card h3 i {
+      color: var(--accent);
+    }
+
+    .pillar-card p {
+      margin: 0;
+      font-size: 0.9375rem;
+      color: var(--text-muted);
+    }
+
+    /* Section dividers */
+    .section-rule {
+      border: none;
+      height: 1px;
+      background: linear-gradient(90deg, transparent, var(--accent), transparent);
+      opacity: 0.65;
+      margin: 0;
+    }
+
+    .section-icon-divider {
+      display: flex;
+      justify-content: center;
+      padding: 0.5rem 0;
+      background: var(--bg-primary);
+    }
+
+    .section-icon-divider i {
+      color: var(--accent);
+      font-size: 0.75rem;
+      opacity: 0.85;
+    }
+
+    /* Services */
+    #services {
+      background: linear-gradient(180deg, var(--bg-secondary) 0%, var(--bg-primary) 100%);
+      padding: 4.25rem 0;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .services-head {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 2rem;
+      align-items: end;
+      margin-bottom: 2.5rem;
+    }
+
+    @media (max-width: 800px) {
+      .services-head {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .services-head p {
+      margin: 0;
+      color: var(--text-muted);
+      font-size: 1rem;
+      max-width: 36rem;
+      justify-self: end;
+    }
+
+    @media (max-width: 800px) {
+      .services-head p {
+        justify-self: start;
+      }
+    }
+
+    .card-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 1.25rem;
+      padding: 12px 4px;
+    }
+
+    @media (max-width: 1024px) {
+      .card-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (max-width: 560px) {
+      .card-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .service-card {
+      position: relative;
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 1.75rem 1.35rem 1.95rem;
+      text-align: left;
+      transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+      box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
+      overflow: visible;
+    }
+
+    .service-card::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      height: 3px;
+      z-index: 0;
+      pointer-events: none;
+      background: linear-gradient(90deg, transparent, var(--accent), transparent);
+      opacity: 0;
+      transition: opacity 0.3s ease;
+      border-radius: 0 0 var(--radius) var(--radius);
+    }
+
+    .service-card > * {
+      position: relative;
+      z-index: 1;
+    }
+
+    .service-card:hover {
+      transform: translateY(-6px);
+      border-color: rgba(204, 0, 0, 0.55);
+      box-shadow: 0 20px 50px rgba(204, 0, 0, 0.18);
+    }
+
+    .service-card:hover::after {
+      opacity: 1;
+    }
+
+    .service-card .icon-wrap {
+      width: 52px;
+      height: 52px;
+      margin-bottom: 1.1rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: var(--radius);
+      background: rgba(204, 0, 0, 0.12);
+      border: 1px solid var(--border);
+      color: var(--accent-soft);
+      font-size: 1.35rem;
+    }
+
+    .service-card h3 {
+      margin: 0 0 0.6rem;
+      font-size: 1.05rem;
+      font-weight: 800;
+    }
+
+    .service-card p {
+      margin: 0;
+      font-size: 0.875rem;
+      color: #a8a8a8;
+      line-height: 1.55;
+    }
+
+    .service-card ul {
+      margin: 1rem 0 0;
+      padding: 0 0 0 1.1rem;
+      font-size: 0.8125rem;
+      color: var(--text-muted);
+    }
+
+    .service-card li {
+      margin-bottom: 0.35rem;
+    }
+
+    .service-card a {
+      color: var(--accent-soft);
+      font-weight: 600;
+      text-decoration: underline;
+      text-underline-offset: 3px;
+    }
+
+    .service-card a:hover {
+      color: var(--accent-hover);
+    }
+
+    /* Digital & Marketing */
+    #digital {
+      padding: 4.25rem 0;
+      border-bottom: 1px solid var(--border);
+      background: linear-gradient(165deg, var(--bg-primary) 0%, #100505 45%, var(--bg-secondary) 100%);
+      position: relative;
+      overflow: visible;
+    }
+
+    #digital::before {
+      content: "";
+      position: absolute;
+      width: min(100%, 100vw);
+      height: 55%;
+      left: 0;
+      right: 0;
+      margin: 0 auto;
+      bottom: -30%;
+      z-index: 0;
+      pointer-events: none;
+      background: radial-gradient(ellipse at center, rgba(204, 0, 0, 0.09), transparent 65%);
+    }
+
+    #digital .container {
+      position: relative;
+      z-index: 1;
+    }
+
+    .digital-intro {
+      max-width: 46rem;
+      margin-bottom: 2rem;
+    }
+
+    .digital-intro p {
+      margin: 0;
+      color: var(--text-muted);
+      font-size: 1.02rem;
+      line-height: 1.65;
+    }
+
+    .digital-split {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1.5rem;
+      align-items: stretch;
+      padding: 10px 2px;
+      position: relative;
+      z-index: 1;
+    }
+
+    @media (max-width: 900px) {
+      .digital-split {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .digital-panel {
+      padding: 2rem 1.75rem;
+      border-radius: var(--radius);
+      background: linear-gradient(165deg, #1e1e1e, #121212);
+      border: 1px solid var(--border);
+      box-shadow: 0 12px 40px rgba(0, 0, 0, 0.45);
+      transition: border-color 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease;
+      position: relative;
+      z-index: 1;
+      isolation: isolate;
+    }
+
+    .digital-panel:hover {
+      border-color: rgba(204, 0, 0, 0.45);
+      box-shadow: 0 18px 56px rgba(204, 0, 0, 0.12);
+      transform: translateY(-4px);
+    }
+
+    .digital-panel-head {
+      display: flex;
+      align-items: flex-start;
+      gap: 1rem;
+      margin-bottom: 1.25rem;
+      padding-bottom: 1.25rem;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .digital-panel-icon {
+      width: 52px;
+      height: 52px;
+      flex-shrink: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: var(--radius);
+      background: rgba(204, 0, 0, 0.14);
+      border: 1px solid var(--border);
+      color: var(--accent-soft);
+      font-size: 1.35rem;
+    }
+
+    .digital-panel-head h3 {
+      margin: 0 0 0.35rem;
+      font-size: 1.2rem;
+      font-weight: 900;
+      letter-spacing: -0.02em;
+    }
+
+    .digital-panel-head .sub {
+      margin: 0;
+      font-size: 0.8125rem;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: #888;
+    }
+
+    .digital-panel > p.desc {
+      margin: 0 0 1.25rem;
+      font-size: 0.9375rem;
+      color: #aeaeae;
+      line-height: 1.6;
+    }
+
+    .digital-list-title {
+      font-size: 0.68rem;
+      font-weight: 800;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: var(--accent-soft);
+      margin: 0 0 0.65rem;
+    }
+
+    .digital-chips {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+    }
+
+    .digital-chip {
+      padding: 0.45rem 0.85rem;
+      border-radius: 999px;
+      border: 1px solid var(--border);
+      background: rgba(0, 0, 0, 0.35);
+      font-size: 0.75rem;
+      font-weight: 700;
+      letter-spacing: 0.04em;
+      color: var(--text-muted);
+      transition: border-color 0.2s ease, color 0.2s ease, background 0.2s ease;
+    }
+
+    .digital-chip:hover {
+      border-color: rgba(204, 0, 0, 0.55);
+      color: #f5f5f5;
+      background: rgba(204, 0, 0, 0.12);
+    }
+
+    .digital-cta {
+      margin-top: 2rem;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.75rem;
+      justify-content: center;
+      padding: 10px 4px 6px;
+      position: relative;
+      z-index: 2;
+      isolation: isolate;
+    }
+
+    /* Process */
+    #process {
+      padding: 4.25rem 0;
+      border-bottom: 1px solid var(--border);
+      background: var(--bg-secondary);
+    }
+
+    .process-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 1rem;
+      margin-top: 2rem;
+    }
+
+    @media (max-width: 900px) {
+      .process-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+
+    @media (max-width: 520px) {
+      .process-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .process-step {
+      position: relative;
+      padding: 1.5rem 1.25rem;
+      border-radius: var(--radius);
+      background: var(--bg-elevated);
+      border: 1px solid var(--border);
+      counter-increment: step;
+    }
+
+    .process-step::before {
+      content: counter(step, decimal-leading-zero);
+      display: block;
+      font-size: 0.7rem;
+      font-weight: 900;
+      letter-spacing: 0.15em;
+      color: var(--accent);
+      margin-bottom: 0.75rem;
+    }
+
+    .process-grid {
+      counter-reset: step;
+    }
+
+    .process-step h3 {
+      margin: 0 0 0.5rem;
+      font-size: 0.95rem;
+      font-weight: 800;
+    }
+
+    .process-step p {
+      margin: 0;
+      font-size: 0.8125rem;
+      color: #9d9d9d;
+      line-height: 1.55;
+    }
+
+    /* About */
+    section.content-section {
+      padding: 4.5rem 0;
+      border-bottom: 1px solid rgba(51, 0, 0, 0.5);
+      background: var(--bg-primary);
+    }
+
+    .about-layout {
+      display: grid;
+      grid-template-columns: minmax(0, 1.1fr) minmax(0, 0.9fr);
+      gap: 2.5rem;
+      align-items: start;
+    }
+
+    @media (max-width: 900px) {
+      .about-layout {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .section-head {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      margin-bottom: 1.25rem;
+    }
+
+    .section-head i {
+      color: var(--accent);
+      font-size: 1.2rem;
+    }
+
+    .section-head h2 {
+      margin: 0;
+      font-size: clamp(1.35rem, 2.2vw, 1.75rem);
+      font-weight: 800;
+      letter-spacing: -0.02em;
+    }
+
+    .prose {
+      color: var(--text-muted);
+      font-size: 1.05rem;
+      max-width: 48rem;
+    }
+
+    .about-panel {
+      padding: 1.75rem;
+      border-radius: var(--radius);
+      background: linear-gradient(160deg, #1c1c1c, #111);
+      border: 1px solid var(--border);
+      position: sticky;
+      top: calc(var(--header-h) + 16px);
+    }
+
+    @media (max-width: 900px) {
+      .about-panel {
+        position: relative;
+        top: auto;
+      }
+    }
+
+    .about-panel h3 {
+      margin: 0 0 1rem;
+      font-size: 0.8rem;
+      font-weight: 800;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: var(--accent-soft);
+    }
+
+    .tag-cloud {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+    }
+
+    .tag {
+      padding: 0.35rem 0.75rem;
+      border-radius: 999px;
+      border: 1px solid var(--border);
+      font-size: 0.7rem;
+      font-weight: 700;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      color: var(--text-muted);
+      background: rgba(0, 0, 0, 0.35);
+    }
+
+    .closing-line {
+      margin-top: 2.25rem;
+      padding-top: 1.75rem;
+      border-top: 1px solid var(--border);
+      font-size: 1.2rem;
+      font-weight: 700;
+      color: var(--text);
+      font-style: italic;
+    }
+
+    /* Contact */
+    #contact {
+      background: linear-gradient(180deg, var(--bg-primary) 0%, #0c0000 40%, var(--bg-secondary) 100%);
+      padding: 4.5rem 0 3rem;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 2rem;
+      align-items: stretch;
+      margin-bottom: 2.5rem;
+    }
+
+    @media (max-width: 900px) {
+      .contact-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .contact-card {
+      padding: 2rem 1.75rem;
+      border-radius: var(--radius);
+      background: var(--card);
+      border: 1px solid var(--border);
+      box-shadow: 0 16px 48px rgba(0, 0, 0, 0.5);
+    }
+
+    .contact-card h2 {
+      margin: 0 0 0.35rem;
+      font-size: clamp(1.5rem, 2.5vw, 2rem);
+      font-weight: 900;
+      letter-spacing: -0.03em;
+    }
+
+    .contact-card > p.sub {
+      margin: 0 0 1.75rem;
+      color: var(--text-muted);
+      font-size: 0.95rem;
+    }
+
+    .contact-lines {
+      display: flex;
+      flex-direction: column;
+      gap: 1.25rem;
+    }
+
+    .contact-line {
+      display: flex;
+      gap: 1rem;
+      align-items: flex-start;
+    }
+
+    .contact-line i {
+      margin-top: 0.2rem;
+      color: var(--accent);
+      width: 1.25rem;
+      text-align: center;
+    }
+
+    .contact-line strong {
+      display: block;
+      font-size: 0.7rem;
+      font-weight: 800;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: #888;
+      margin-bottom: 0.25rem;
+    }
+
+    .contact-line a,
+    .contact-line span {
+      font-size: 1rem;
+      font-weight: 600;
+      color: var(--text);
+    }
+
+    .contact-line a:hover {
+      color: var(--accent-hover);
+    }
+
+    .map-embed {
+      border-radius: var(--radius);
+      overflow: hidden;
+      border: 1px solid var(--border);
+      min-height: 280px;
+      background: #0a0a0a;
+    }
+
+    .map-embed iframe {
+      display: block;
+      width: 100%;
+      height: 320px;
+      border: 0;
+      filter: grayscale(1) contrast(1.05) invert(0.92);
+    }
+
+    .map-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      margin-top: 1rem;
+      font-size: 0.8125rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--accent-soft);
+    }
+
+    .map-link:hover {
+      color: var(--accent-hover);
+    }
+
+    .newsletter-box {
+      max-width: 720px;
+      margin: 0 auto;
+      text-align: center;
+      padding: 2.5rem 2rem;
+      background: linear-gradient(180deg, #1a1a1a, #121212);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      box-shadow: 0 12px 48px rgba(0, 0, 0, 0.55);
+    }
+
+    .newsletter-box h2 {
+      margin: 0 0 1.25rem;
+      font-size: clamp(1.25rem, 2.2vw, 1.65rem);
+      font-weight: 800;
+    }
+
+    .newsletter-form {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      padding: 8px 2px 4px;
+      position: relative;
+      z-index: 1;
+      isolation: isolate;
+    }
+
+    @media (min-width: 520px) {
+      .newsletter-form {
+        flex-direction: row;
+        align-items: stretch;
+      }
+    }
+
+    .newsletter-form input {
+      flex: 1;
+      padding: 0.9rem 1rem;
+      border-radius: var(--radius);
+      border: 1px solid var(--border);
+      background: var(--bg-secondary);
+      color: var(--text);
+      font-family: inherit;
+      font-size: 1rem;
+      outline: none;
+      transition: border-color 0.2s, box-shadow 0.2s;
+    }
+
+    .newsletter-form input:focus {
+      border-color: var(--accent);
+      box-shadow: 0 0 0 3px rgba(204, 0, 0, 0.18);
+    }
+
+    .newsletter-form input::placeholder {
+      color: #777;
+    }
+
+    .newsletter-form .btn-primary {
+      padding-left: 2rem;
+      padding-right: 2rem;
+      white-space: nowrap;
+    }
+
+    /* Footer */
+    .site-footer {
+      padding: 3rem 24px 2rem;
+      border-top: 2px solid var(--accent);
+      background: #000000;
+      color: var(--text-muted);
+      font-size: 0.875rem;
+    }
+
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 2fr 1fr 1fr;
+      gap: 2rem;
+      max-width: var(--max);
+      margin: 0 auto 2.5rem;
+    }
+
+    @media (max-width: 800px) {
+      .footer-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .footer-brand {
+      font-weight: 900;
+      font-size: 1.25rem;
+      color: var(--text);
+      margin-bottom: 0.75rem;
+    }
+
+    .footer-brand span {
+      color: var(--accent);
+    }
+
+    .footer-col h4 {
+      margin: 0 0 1rem;
+      font-size: 0.72rem;
+      font-weight: 800;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: var(--accent-soft);
+    }
+
+    .footer-col ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+
+    .footer-col li {
+      margin-bottom: 0.5rem;
+    }
+
+    .footer-col a {
+      color: #aaa;
+      font-weight: 500;
+    }
+
+    .footer-col a:hover {
+      color: var(--accent-hover);
+    }
+
+    .footer-bottom {
+      text-align: center;
+      padding-top: 1.5rem;
+      border-top: 1px solid var(--border);
+      max-width: var(--max);
+      margin: 0 auto;
+      font-size: 0.8125rem;
+      color: #777;
+    }
+
+    /* Back to top */
+    .back-to-top {
+      position: fixed;
+      right: 20px;
+      bottom: 24px;
+      z-index: 999;
+      width: 50px;
+      height: 50px;
+      border-radius: var(--radius);
+      background: var(--accent);
+      color: #000;
+      border: 2px solid #000000;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      opacity: 0;
+      visibility: hidden;
+      transform: translateY(14px);
+      transition: opacity 0.3s ease, visibility 0.3s ease, transform 0.3s ease, background 0.2s ease;
+      box-shadow: 0 6px 28px rgba(204, 0, 0, 0.45);
+    }
+
+    .back-to-top.visible {
+      opacity: 1;
+      visibility: visible;
+      transform: translateY(0);
+    }
+
+    .back-to-top:hover {
+      background: var(--accent-hover);
+    }
+
+    .back-to-top:focus-visible {
+      outline: 2px solid var(--accent-hover);
+      outline-offset: 3px;
+    }
+
+    /* Reveal */
+    .reveal {
+      opacity: 0;
+      transform: translateY(32px);
+      transition: opacity 0.75s cubic-bezier(0.22, 1, 0.36, 1), transform 0.75s cubic-bezier(0.22, 1, 0.36, 1);
+    }
+
+    .reveal.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .reveal-stagger > *:nth-child(1) {
+      transition-delay: 0.05s;
+    }
+    .reveal-stagger > *:nth-child(2) {
+      transition-delay: 0.1s;
+    }
+    .reveal-stagger > *:nth-child(3) {
+      transition-delay: 0.15s;
+    }
+    .reveal-stagger > *:nth-child(4) {
+      transition-delay: 0.2s;
+    }
+
+    .visually-hidden {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      padding: 0;
+      margin: -1px;
+      overflow: hidden;
+      clip: rect(0, 0, 0, 0);
+      white-space: nowrap;
+      border: 0;
+    }
+
+    @media (max-width: 640px) {
+      .container {
+        padding: 0 20px;
+      }
+
+      .site-header .container {
+        padding-left: 20px;
+        padding-right: 20px;
+      }
+
+      .nav-mobile {
+        padding-left: 20px;
+        padding-right: 20px;
+      }
+
+      .hero {
+        padding: 2.5rem 0 3.25rem;
+      }
+
+      #capabilities,
+      .pillars,
+      #services,
+      #digital,
+      #process,
+      section.content-section,
+      #contact {
+        padding-left: 0;
+        padding-right: 0;
+      }
+
+      #capabilities,
+      .pillars,
+      #services,
+      #digital,
+      #process,
+      section.content-section,
+      #contact {
+        padding-top: 2.75rem;
+        padding-bottom: 2.75rem;
+      }
+
+      .hero-orbit {
+        display: none;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="#home" class="logo" aria-label="Walo Enterprises home">
+        <i class="fa-solid fa-globe" style="color: var(--accent); font-size: 1.15rem;" aria-hidden="true"></i>
+        Walo <span>Enterprises</span>
+      </a>
+      <div class="header-meta" aria-label="Quick contact">
+        <a href="tel:+61488996473"><i class="fa-solid fa-phone" aria-hidden="true"></i> +61 488 996 473</a>
+        <a href="mailto:papa.diop@waloenterprises.com.au"><i class="fa-solid fa-envelope" aria-hidden="true"></i> papa.diop@waloenterprises.com.au</a>
+      </div>
+      <nav class="nav-desktop" aria-label="Primary">
+        <a href="#home" data-nav="home">Home</a>
+        <a href="#capabilities" data-nav="capabilities">Capabilities</a>
+        <a href="#services" data-nav="services">Services</a>
+        <a href="#digital" data-nav="digital">Digital</a>
+        <a href="#about" data-nav="about">About</a>
+        <a href="#contact" data-nav="contact">Contact</a>
+      </nav>
+      <div class="header-actions">
+        <a href="#contact" class="btn btn-primary header-contact">Contact us</a>
+        <button type="button" class="menu-toggle" id="menuToggle" aria-expanded="false" aria-controls="mobileNav" aria-label="Open menu">
+          <i class="fa-solid fa-bars" aria-hidden="true"></i>
+        </button>
+      </div>
+    </div>
+    <nav class="nav-mobile" id="mobileNav" aria-label="Mobile primary">
+      <a href="#home" data-nav="home">Home</a>
+      <a href="#capabilities" data-nav="capabilities">Capabilities</a>
+      <a href="#services" data-nav="services">Services</a>
+      <a href="#digital" data-nav="digital">Digital</a>
+      <a href="#about" data-nav="about">About</a>
+      <a href="#contact" data-nav="contact">Contact</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero" id="home">
+      <div class="hero-grid" aria-hidden="true"></div>
+      <div class="hero-orbit" aria-hidden="true"></div>
+      <div class="container hero-inner">
+        <p class="hero-eyebrow"><i class="fa-solid fa-location-dot" aria-hidden="true"></i> Melbourne · Serving partners globally</p>
+        <div class="hero-top">
+          <h2 class="hero-brand">Walo <span class="accent">Enterprises</span></h2>
+          <a href="#contact" class="btn btn-ghost header-contact-subtle">Contact us</a>
+        </div>
+        <h1>Walo Enterprises Connecting Opportunities with Integrated IT Services, Consulting, Trade, and Import &amp; Export Solutions</h1>
+        <p class="hero-lead">
+          We architect outcomes across technology, advisory, and international commerce—aligning governance, execution, and wellbeing so your organisation can scale with clarity and confidence.
+        </p>
+        <div class="hero-cta-row">
+          <a href="#services" class="btn btn-primary">Explore services</a>
+          <a href="#capabilities" class="btn btn-ghost">Discover</a>
+          <a href="tel:+61488996473" class="btn btn-ghost"><i class="fa-solid fa-phone-volume" aria-hidden="true"></i> Call us</a>
+        </div>
+        <div class="hero-trust">
+          <div class="hero-trust-item"><i class="fa-solid fa-shield-halved" aria-hidden="true"></i> Governance-minded delivery</div>
+          <div class="hero-trust-item"><i class="fa-solid fa-network-wired" aria-hidden="true"></i> Integrated IT &amp; operations</div>
+          <div class="hero-trust-item"><i class="fa-solid fa-earth-oceania" aria-hidden="true"></i> Cross-border trade expertise</div>
+        </div>
+      </div>
+    </section>
+
+    <div class="ticker-wrap" aria-hidden="true">
+      <div class="ticker">
+        <div class="ticker-inner">
+          <span>IT Services</span> · Web Apps · <span>SaaS</span> · Paid Ads · <span>SMM</span> · SEO · Content · <span>Trade</span> · Import &amp; Export · Wellbeing ·
+        </div>
+        <div class="ticker-inner">
+          <span>IT Services</span> · Web Apps · <span>SaaS</span> · Paid Ads · <span>SMM</span> · SEO · Content · <span>Trade</span> · Import &amp; Export · Wellbeing ·
+        </div>
+      </div>
+    </div>
+
+    <section id="capabilities">
+      <div class="container">
+        <p class="section-kicker reveal">Signal</p>
+        <h2 class="section-title reveal">Built for complex, multi-market mandates.</h2>
+        <div class="stats-grid reveal reveal-stagger">
+          <div class="stat-card">
+            <div class="stat-value"><span class="stat-num" data-target="4" data-suffix="">0</span><span class="suffix" aria-hidden="true">+</span></div>
+            <div class="stat-label">Integrated disciplines</div>
+            <p class="stat-desc">Technology, consulting, trade, and import-export orchestrated as one operating rhythm—not siloed vendors.</p>
+          </div>
+          <div class="stat-card">
+            <div class="stat-value"><span class="stat-num" data-target="24" data-suffix="">0</span><span class="suffix">/7</span></div>
+            <div class="stat-label">Responsiveness</div>
+            <p class="stat-desc">Executive-grade communication cadence for stakeholders across regions, channels, and time zones.</p>
+          </div>
+          <div class="stat-card">
+            <div class="stat-value"><span class="stat-num" data-target="360" data-suffix="°">0</span></div>
+            <div class="stat-label">Partnership lens</div>
+            <p class="stat-desc">Commercial, technical, regulatory, and human factors considered together—so decisions hold under real-world pressure.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="pillars" aria-labelledby="pillars-heading">
+      <div class="container">
+        <p class="section-kicker reveal">Pillars</p>
+        <h2 class="section-title reveal" id="pillars-heading">Enterprise rigor. Entrepreneurial speed.</h2>
+        <div class="pillar-grid">
+          <article class="pillar-card reveal">
+            <h3><i class="fa-solid fa-bullseye" aria-hidden="true"></i> Strategic clarity</h3>
+            <p>We translate ambition into roadmaps—prioritised investments, measurable milestones, and transparent trade-offs your board can stand behind.</p>
+          </article>
+          <article class="pillar-card reveal">
+            <h3><i class="fa-solid fa-gears" aria-hidden="true"></i> Operational leverage</h3>
+            <p>From digital foundations to supplier ecosystems, we help you streamline workflows, reduce friction, and unlock capacity without compromising control.</p>
+          </article>
+          <article class="pillar-card reveal">
+            <h3><i class="fa-solid fa-heart-pulse" aria-hidden="true"></i> Human-centred momentum</h3>
+            <p>Wellbeing is woven into how we consult—because sustainable performance depends on resilient teams, not burnt-out sprint cycles.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <hr class="section-rule" />
+    <div class="section-icon-divider" aria-hidden="true"><i class="fa-solid fa-grip-lines"></i></div>
+
+    <section id="services">
+      <div class="container">
+        <div class="services-head">
+          <div class="reveal">
+            <p class="section-kicker">Portfolio</p>
+            <h2 class="section-title" style="margin-bottom: 0;">Services</h2>
+          </div>
+          <p class="reveal">
+            A single partner model spanning technology delivery, advisory, and global commerce—designed for organisations that need precision at scale and pragmatism on the ground.
+          </p>
+        </div>
+        <div class="card-grid">
+          <article class="service-card reveal">
+            <div class="icon-wrap"><i class="fa-solid fa-laptop-code" aria-hidden="true"></i></div>
+            <h3>IT Services</h3>
+            <p>Modernise platforms, strengthen cybersecurity posture, and connect teams with dependable infrastructure.</p>
+            <ul>
+              <li>Web apps, SaaS &amp; more — <a href="#digital">Digital suite</a></li>
+              <li>Architecture &amp; roadmaps</li>
+              <li>Cloud &amp; integration patterns</li>
+            </ul>
+          </article>
+          <article class="service-card reveal">
+            <div class="icon-wrap"><i class="fa-solid fa-handshake" aria-hidden="true"></i></div>
+            <h3>Consulting</h3>
+            <p>Evidence-led advisory across growth, efficiency, risk, and organisational design—aligned to your sector realities.</p>
+            <ul>
+              <li>Market entry &amp; expansion</li>
+              <li>Operating model design</li>
+              <li>Program assurance</li>
+            </ul>
+          </article>
+          <article class="service-card reveal">
+            <div class="icon-wrap"><i class="fa-solid fa-chart-line" aria-hidden="true"></i></div>
+            <h3>Trade</h3>
+            <p>Commercial structures that connect buyers, sellers, and partners with disciplined governance and transparent execution.</p>
+            <ul>
+              <li>Partner sourcing</li>
+              <li>Deal shaping</li>
+              <li>Performance tracking</li>
+            </ul>
+          </article>
+          <article class="service-card reveal">
+            <div class="icon-wrap"><i class="fa-solid fa-ship" aria-hidden="true"></i></div>
+            <h3>Import &amp; Export</h3>
+            <p>Navigate documentation, logistics handoffs, and corridor-specific requirements with a coordinated, end-to-end mindset.</p>
+            <ul>
+              <li>Compliance alignment</li>
+              <li>Supply continuity</li>
+              <li>Cross-border coordination</li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <hr class="section-rule" />
+    <div class="section-icon-divider" aria-hidden="true"><i class="fa-solid fa-grip-lines"></i></div>
+
+    <section id="digital" aria-labelledby="digital-heading">
+      <div class="container">
+        <p class="section-kicker reveal">Build &amp; grow</p>
+        <h2 class="section-title reveal" id="digital-heading">Digital &amp; Marketing</h2>
+        <div class="digital-intro reveal">
+          <p>
+            Product-grade engineering alongside performance marketing—so your web apps and SaaS can ship fast, scale cleanly, and win demand through paid media, organic search, social, content, and high-impact campaigns including guerrilla and field activations.
+          </p>
+        </div>
+        <div class="digital-split">
+          <article class="digital-panel reveal">
+            <div class="digital-panel-head">
+              <div class="digital-panel-icon" aria-hidden="true"><i class="fa-solid fa-code"></i></div>
+              <div>
+                <h3>IT Services — web &amp; SaaS</h3>
+                <p class="sub">Product, platform &amp; delivery</p>
+              </div>
+            </div>
+            <p class="desc">
+              From first customer journeys to multi-tenant SaaS, we help you design, build, and evolve modern web applications—security, observability, and maintainability baked in, not bolted on later.
+            </p>
+            <p class="digital-list-title">Includes</p>
+            <div class="digital-chips">
+              <span class="digital-chip">Web applications</span>
+              <span class="digital-chip">SaaS &amp; subscriptions</span>
+              <span class="digital-chip">Design systems &amp; UI</span>
+              <span class="digital-chip">APIs &amp; integrations</span>
+              <span class="digital-chip">MVPs &amp; prototypes</span>
+              <span class="digital-chip">Cloud-native patterns</span>
+              <span class="digital-chip">DevOps &amp; release cadence</span>
+              <span class="digital-chip">Performance &amp; reliability</span>
+              <span class="digital-chip">Analytics &amp; product insights</span>
+              <span class="digital-chip">And more</span>
+            </div>
+          </article>
+          <article class="digital-panel reveal">
+            <div class="digital-panel-head">
+              <div class="digital-panel-icon" aria-hidden="true"><i class="fa-solid fa-bullhorn"></i></div>
+              <div>
+                <h3>Marketing — full funnel</h3>
+                <p class="sub">Acquisition, attention, conversion</p>
+              </div>
+            </div>
+            <p class="desc">
+              Integrated campaigns across paid, owned, and earned channels—aligned creative, targeting, measurement, and iteration so budgets compound learning, not noise.
+            </p>
+            <p class="digital-list-title">Includes</p>
+            <div class="digital-chips">
+              <span class="digital-chip">Paid ads (search, social, display)</span>
+              <span class="digital-chip">SMM — social media marketing</span>
+              <span class="digital-chip">SEO &amp; technical SEO</span>
+              <span class="digital-chip">Guerrilla &amp; activations</span>
+              <span class="digital-chip">Content strategy &amp; production</span>
+              <span class="digital-chip">Lifecycle &amp; email</span>
+              <span class="digital-chip">Landing pages &amp; CRO</span>
+              <span class="digital-chip">Influencer &amp; partnerships</span>
+              <span class="digital-chip">Brand &amp; creative direction</span>
+              <span class="digital-chip">And more</span>
+            </div>
+          </article>
+        </div>
+        <div class="digital-cta reveal">
+          <a href="#contact" class="btn btn-primary">Discuss a project</a>
+          <a href="#services" class="btn btn-ghost">Back to services</a>
+        </div>
+      </div>
+    </section>
+
+    <hr class="section-rule" />
+    <div class="section-icon-divider" aria-hidden="true"><i class="fa-solid fa-grip-lines"></i></div>
+
+    <section id="process">
+      <div class="container">
+        <p class="section-kicker reveal">Method</p>
+        <h2 class="section-title reveal">How we partner with you</h2>
+        <div class="process-grid">
+          <div class="process-step reveal">
+            <h3>Discover &amp; diagnose</h3>
+            <p>We pressure-test objectives, constraints, and stakeholder expectations to establish a shared fact base.</p>
+          </div>
+          <div class="process-step reveal">
+            <h3>Design the pathway</h3>
+            <p>Options are modeled with clear costs, benefits, and risks—so leadership can commit with conviction.</p>
+          </div>
+          <div class="process-step reveal">
+            <h3>Execute with discipline</h3>
+            <p>Delivery is coordinated across workstreams, vendors, and borders with tight governance and reporting.</p>
+          </div>
+          <div class="process-step reveal">
+            <h3>Measure &amp; evolve</h3>
+            <p>We embed feedback loops, KPIs, and continuous improvement so value compounds after launch.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <hr class="section-rule" />
+    <div class="section-icon-divider" aria-hidden="true"><i class="fa-solid fa-grip-lines"></i></div>
+
+    <section class="content-section" id="about">
+      <div class="container about-layout">
+        <div>
+          <div class="reveal">
+            <div class="section-head">
+              <i class="fa-solid fa-circle-info" aria-hidden="true"></i>
+              <h2>About</h2>
+            </div>
+            <p class="prose">At Walo Enterprises, we are dedicated to being your global partner, bridging industries and borders with our expertise in Consulting, Import-Export, and Wellbeing services. Our mission is to empower businesses and individuals by providing innovative solutions that drive growth and success across various sectors.</p>
+          </div>
+          <div class="reveal">
+            <div class="section-head" style="margin-top: 2rem;">
+              <i class="fa-solid fa-compass" aria-hidden="true"></i>
+              <h2>Approach</h2>
+            </div>
+            <p class="prose">With a deep understanding of global markets and diverse industries, we offer tailored strategies and services that cater to the unique needs of our clients. Whether you're looking to expand your reach, streamline operations, or explore new opportunities, we bring a comprehensive, results-driven approach to every partnership.</p>
+          </div>
+          <div class="reveal">
+            <div class="section-head" style="margin-top: 2rem;">
+              <i class="fa-solid fa-shield-halved" aria-hidden="true"></i>
+              <h2>Commitment</h2>
+            </div>
+            <p class="prose">Our team is committed to delivering excellence, ensuring that our clients not only meet but exceed their goals. Through strategic insights and a passion for progress, we aim to create long-lasting relationships built on trust and mutual success.</p>
+          </div>
+          <p class="closing-line reveal">At Walo Enterprises, your success is our success.</p>
+        </div>
+        <aside class="about-panel reveal" aria-label="Focus areas">
+          <h3>Sectors &amp; themes</h3>
+          <div class="tag-cloud">
+            <span class="tag">Professional services</span>
+            <span class="tag">Trade corridors</span>
+            <span class="tag">Digital transformation</span>
+            <span class="tag">Supply networks</span>
+            <span class="tag">Risk &amp; resilience</span>
+            <span class="tag">Wellbeing programs</span>
+            <span class="tag">Growth strategy</span>
+            <span class="tag">International expansion</span>
+          </div>
+          <p style="margin: 1.25rem 0 0; font-size: 0.875rem; color: #8d8d8d; line-height: 1.55;">
+            Whether you are modernising platforms, opening a new market, or aligning wellbeing with performance, we bring a senior team mindset to every engagement.
+          </p>
+        </aside>
+      </div>
+    </section>
+
+    <hr class="section-rule" />
+    <div class="section-icon-divider" aria-hidden="true"><i class="fa-solid fa-grip-lines"></i></div>
+
+    <section id="contact">
+      <div class="container">
+        <p class="section-kicker reveal">Contact</p>
+        <h2 class="section-title reveal">Let’s architect the next chapter together.</h2>
+        <div class="contact-grid">
+          <div class="contact-card reveal">
+            <h2>Melbourne headquarters</h2>
+            <p class="sub">Reach our team directly for briefings, proposals, and partnership inquiries.</p>
+            <div class="contact-lines">
+              <div class="contact-line">
+                <i class="fa-solid fa-phone" aria-hidden="true"></i>
+                <div>
+                  <strong>Phone</strong>
+                  <a href="tel:+61488996473">+61 488 996 473</a>
+                </div>
+              </div>
+              <div class="contact-line">
+                <i class="fa-solid fa-envelope" aria-hidden="true"></i>
+                <div>
+                  <strong>Email</strong>
+                  <a href="mailto:papa.diop@waloenterprises.com.au">papa.diop@waloenterprises.com.au</a>
+                </div>
+              </div>
+              <div class="contact-line">
+                <i class="fa-solid fa-location-dot" aria-hidden="true"></i>
+                <div>
+                  <strong>Address</strong>
+                  <span>Suite 601/470 St Kilda Road, Melbourne, VIC 3004, Australia</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="reveal">
+            <div class="map-embed">
+              <iframe
+                title="Walo Enterprises on the map"
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"
+                src="https://www.google.com/maps?q=Suite%20601%2F470%20St%20Kilda%20Road%20Melbourne%20VIC%203004&output=embed"
+                allowfullscreen
+              ></iframe>
+            </div>
+            <a class="map-link" href="https://www.google.com/maps/search/?api=1&query=Suite+601%2F470+St+Kilda+Road+Melbourne+VIC+3004+Australia" target="_blank" rel="noopener noreferrer">
+              Open in Google Maps <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i>
+            </a>
+          </div>
+        </div>
+
+        <div class="newsletter-box reveal">
+          <h2>Subscribe to our mailing list</h2>
+          <form class="newsletter-form" id="newsletterForm" novalidate>
+            <label for="emailInput" class="visually-hidden">Email</label>
+            <input type="email" id="emailInput" name="email" placeholder="Your email address" autocomplete="email" required />
+            <button type="submit" class="btn btn-primary">Submit</button>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-grid">
+      <div>
+        <div class="footer-brand">Walo <span>Enterprises</span></div>
+        <p style="margin: 0; max-width: 32rem; line-height: 1.6;">
+          Connecting opportunities with integrated IT services, consulting, trade, and import &amp; export solutions—from Melbourne to markets worldwide.
+        </p>
+      </div>
+      <div class="footer-col">
+        <h4>Navigate</h4>
+        <ul>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#capabilities">Capabilities</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#digital">Digital &amp; Marketing</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <ul>
+          <li><a href="tel:+61488996473">+61 488 996 473</a></li>
+          <li><a href="mailto:papa.diop@waloenterprises.com.au">papa.diop@waloenterprises.com.au</a></li>
+          <li>Suite 601/470 St Kilda Road<br />Melbourne, VIC 3004, Australia</li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">© 2025 Walo Enterprises. All rights reserved.</div>
+  </footer>
+
+  <button type="button" class="back-to-top" id="backToTop" aria-label="Back to top">
+    <i class="fa-solid fa-arrow-up" aria-hidden="true"></i>
+  </button>
+
+  <script>
+    (function () {
+      var menuToggle = document.getElementById("menuToggle");
+      var mobileNav = document.getElementById("mobileNav");
+      var navLinks = document.querySelectorAll("[data-nav]");
+      var backToTop = document.getElementById("backToTop");
+      var form = document.getElementById("newsletterForm");
+      var emailInput = document.getElementById("emailInput");
+
+      function setMenuOpen(open) {
+        if (!mobileNav || !menuToggle) return;
+        mobileNav.classList.toggle("open", open);
+        menuToggle.setAttribute("aria-expanded", open ? "true" : "false");
+        menuToggle.setAttribute("aria-label", open ? "Close menu" : "Open menu");
+        var icon = menuToggle.querySelector("i");
+        if (icon) {
+          icon.className = open ? "fa-solid fa-xmark" : "fa-solid fa-bars";
+        }
+      }
+
+      if (menuToggle && mobileNav) {
+        menuToggle.addEventListener("click", function () {
+          setMenuOpen(!mobileNav.classList.contains("open"));
+        });
+        mobileNav.querySelectorAll("a").forEach(function (a) {
+          a.addEventListener("click", function () {
+            setMenuOpen(false);
+          });
+        });
+      }
+
+      document.querySelectorAll('a[href^="#"]').forEach(function (anchor) {
+        anchor.addEventListener("click", function (e) {
+          var id = this.getAttribute("href");
+          if (!id || id === "#") return;
+          var target = document.querySelector(id);
+          if (target) {
+            e.preventDefault();
+            var header = document.querySelector(".site-header");
+            var offset = header ? header.offsetHeight : 0;
+            var top = target.getBoundingClientRect().top + window.pageYOffset - offset;
+            window.scrollTo({ top: top, behavior: "smooth" });
+          }
+        });
+      });
+
+      if (form && emailInput) {
+        form.addEventListener("submit", function (e) {
+          e.preventDefault();
+          if (!emailInput.value.trim()) {
+            emailInput.focus();
+            return;
+          }
+          alert("Thanks for subscribing!");
+          emailInput.value = "";
+        });
+      }
+
+      if (backToTop) {
+        backToTop.addEventListener("click", function () {
+          window.scrollTo({ top: 0, behavior: "smooth" });
+        });
+        window.addEventListener(
+          "scroll",
+          function () {
+            backToTop.classList.toggle("visible", window.pageYOffset > 400);
+          },
+          { passive: true }
+        );
+      }
+
+      var sections = [
+        { id: "home", el: document.getElementById("home") },
+        { id: "capabilities", el: document.getElementById("capabilities") },
+        { id: "services", el: document.getElementById("services") },
+        { id: "digital", el: document.getElementById("digital") },
+        { id: "process", el: document.getElementById("process") },
+        { id: "about", el: document.getElementById("about") },
+        { id: "contact", el: document.getElementById("contact") },
+      ];
+
+      function updateActiveNav() {
+        var scrollY = window.pageYOffset;
+        var header = document.querySelector(".site-header");
+        var offset = (header ? header.offsetHeight : 76) + 48;
+        var current = "home";
+        for (var i = sections.length - 1; i >= 0; i--) {
+          var s = sections[i];
+          if (s.el && s.el.offsetTop <= scrollY + offset) {
+            current = s.id;
+            break;
+          }
+        }
+        var navId = current === "process" ? "services" : current;
+        navLinks.forEach(function (link) {
+          link.classList.toggle("active", link.getAttribute("data-nav") === navId);
+        });
+      }
+
+      window.addEventListener("scroll", updateActiveNav, { passive: true });
+      window.addEventListener("load", updateActiveNav);
+
+      /* Count-up when stats visible */
+      var counted = false;
+      var statNums = document.querySelectorAll(".stat-num");
+
+      function runCounters() {
+        if (counted || !statNums.length) return;
+        statNums.forEach(function (el) {
+          var target = parseInt(el.getAttribute("data-target"), 10);
+          var suffix = el.getAttribute("data-suffix") || "";
+          if (isNaN(target)) return;
+          var duration = 1400;
+          var start = performance.now();
+          function frame(now) {
+            var t = Math.min(1, (now - start) / duration);
+            var eased = 1 - Math.pow(1 - t, 3);
+            var val = Math.round(target * eased);
+            el.textContent = val + suffix;
+            if (t < 1) requestAnimationFrame(frame);
+            else el.textContent = target + suffix;
+          }
+          requestAnimationFrame(frame);
+        });
+        counted = true;
+      }
+
+      var cap = document.getElementById("capabilities");
+      if (cap && "IntersectionObserver" in window) {
+        var capObs = new IntersectionObserver(
+          function (entries) {
+            entries.forEach(function (entry) {
+              if (entry.isIntersecting) {
+                runCounters();
+                capObs.disconnect();
+              }
+            });
+          },
+          { threshold: 0.25 }
+        );
+        capObs.observe(cap);
+      } else {
+        runCounters();
+      }
+
+      var revealEls = document.querySelectorAll(".reveal");
+      if ("IntersectionObserver" in window) {
+        var io = new IntersectionObserver(
+          function (entries) {
+            entries.forEach(function (entry) {
+              if (entry.isIntersecting) {
+                entry.target.classList.add("visible");
+                io.unobserve(entry.target);
+              }
+            });
+          },
+          { root: null, rootMargin: "0px 0px -6% 0px", threshold: 0.08 }
+        );
+        revealEls.forEach(function (el) {
+          io.observe(el);
+        });
+      } else {
+        revealEls.forEach(function (el) {
+          el.classList.add("visible");
+        });
+      }
+    })();
+  </script>
+</body>
+</html>
