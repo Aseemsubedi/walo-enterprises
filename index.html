@@ -24,7 +24,7 @@
       --card: #1a1a1a;
       --max: 1240px;
       --radius: 10px;
-      --header-h: 76px;
+      --header-h: 70px;
     }
 
     *,
@@ -36,6 +36,8 @@
     html {
       scroll-behavior: smooth;
       scroll-padding-top: var(--header-h);
+      width: 100%;
+      overflow-x: hidden;
     }
 
     body {
@@ -44,6 +46,7 @@
       background: var(--bg-primary);
       color: var(--text);
       line-height: 1.65;
+      width: 100%;
       overflow-x: hidden;
     }
 
@@ -82,9 +85,10 @@
       position: sticky;
       top: 0;
       z-index: 1000;
-      background: rgba(5, 5, 5, 0.88);
+      background: rgba(255, 255, 255, 0.97);
       backdrop-filter: blur(16px);
-      border-bottom: 1px solid var(--border);
+      border-bottom: 1px solid #e7e7e7;
+      box-shadow: 0 4px 14px rgba(0, 0, 0, 0.06);
     }
 
     .header-inner {
@@ -96,44 +100,37 @@
     }
 
     .logo {
-      font-weight: 900;
-      font-size: 1.05rem;
-      letter-spacing: -0.03em;
-      color: var(--text);
-      display: flex;
-      align-items: center;
-      gap: 0.5rem;
-    }
-
-    .logo span {
-      color: var(--accent);
-    }
-
-    .header-meta {
-      display: none;
-      align-items: center;
-      gap: 1.25rem;
-      font-size: 0.8125rem;
-      color: var(--text-muted);
-    }
-
-    .header-meta a {
       display: inline-flex;
       align-items: center;
-      gap: 0.4rem;
-      font-weight: 500;
-      color: var(--text-muted);
+      gap: 0.5rem;
+      line-height: 0;
+      padding: 0.28rem 0.5rem;
+      border-radius: 10px;
+      background: linear-gradient(180deg, #ffffff 0%, #fff1f1 100%);
+      border: 1px solid #e8d0d0;
+      box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1), 0 0 0 2px rgba(229, 57, 53, 0.07);
     }
 
-    .header-meta a i {
-      color: var(--accent);
-      font-size: 0.9rem;
+    .logo-img {
+      height: 46px;
+      width: auto;
+      display: block;
+      object-fit: contain;
     }
 
-    @media (min-width: 1100px) {
-      .header-meta {
-        display: flex;
-      }
+    .hero-logo {
+      width: min(235px, 56vw);
+      height: auto;
+      display: block;
+      filter: drop-shadow(0 8px 22px rgba(0, 0, 0, 0.4));
+    }
+
+    .footer-logo {
+      height: 68px;
+      width: auto;
+      display: block;
+      margin-bottom: 0.75rem;
+      object-fit: contain;
     }
 
     .nav-desktop {
@@ -143,11 +140,11 @@
     }
 
     .nav-desktop a {
-      font-weight: 600;
+      font-weight: 700;
       font-size: 0.75rem;
       text-transform: uppercase;
       letter-spacing: 0.06em;
-      color: var(--text-muted);
+      color: #2f2f2f;
       position: relative;
       padding: 0.35rem 0;
     }
@@ -235,12 +232,12 @@
       height: 44px;
       align-items: center;
       justify-content: center;
-      background: var(--card);
-      border: 1px solid var(--border);
+      background: #ffffff;
+      border: 1px solid #d8d8d8;
       border-radius: var(--radius);
-      color: var(--text);
+      color: #2d2d2d;
       cursor: pointer;
-      transition: border-color 0.2s, color 0.2s;
+      transition: border-color 0.2s, color 0.2s, background 0.2s;
     }
 
     .menu-toggle:hover {
@@ -253,8 +250,8 @@
       flex-direction: column;
       gap: 0;
       padding: 0 24px 1rem;
-      border-bottom: 1px solid var(--border);
-      background: var(--bg-secondary);
+      border-bottom: 1px solid #ececec;
+      background: #ffffff;
     }
 
     .nav-mobile.open {
@@ -263,12 +260,12 @@
 
     .nav-mobile a {
       padding: 1rem 0;
-      border-top: 1px solid var(--border);
-      font-weight: 600;
+      border-top: 1px solid #efefef;
+      font-weight: 700;
       font-size: 0.875rem;
       letter-spacing: 0.04em;
       text-transform: uppercase;
-      color: var(--text-muted);
+      color: #2f2f2f;
     }
 
     .nav-mobile a:first-child {
@@ -297,7 +294,7 @@
       min-height: calc(100dvh - var(--header-h));
       display: flex;
       align-items: center;
-      padding: 3.5rem 0 4.5rem;
+      padding: 4rem 0 4.5rem;
       border-bottom: 1px solid var(--border);
       overflow: visible;
     }
@@ -306,13 +303,13 @@
       position: absolute;
       inset: -20%;
       background-image:
-        linear-gradient(rgba(204, 0, 0, 0.07) 1px, transparent 1px),
-        linear-gradient(90deg, rgba(204, 0, 0, 0.07) 1px, transparent 1px);
+        linear-gradient(rgba(255, 255, 255, 0.14) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255, 255, 255, 0.14) 1px, transparent 1px);
       background-size: 64px 64px;
       transform: perspective(800px) rotateX(12deg);
       transform-origin: center top;
       animation: gridDrift 28s linear infinite;
-      opacity: 0.5;
+      opacity: 0.26;
       pointer-events: none;
     }
 
@@ -330,9 +327,10 @@
       position: absolute;
       inset: 0;
       background:
-        radial-gradient(ellipse 90% 60% at 70% 0%, rgba(204, 0, 0, 0.35), transparent 55%),
-        radial-gradient(ellipse 70% 50% at 10% 80%, rgba(204, 0, 0, 0.12), transparent 50%),
-        linear-gradient(180deg, rgba(51, 0, 0, 0.55) 0%, transparent 45%, rgba(0, 0, 0, 0.85) 100%);
+        radial-gradient(ellipse 92% 66% at 70% 0%, rgba(255, 255, 255, 0.5), transparent 56%),
+        radial-gradient(ellipse 70% 56% at 8% 82%, rgba(255, 255, 255, 0.18), transparent 52%),
+        radial-gradient(ellipse 80% 60% at 85% 18%, rgba(229, 57, 53, 0.2), transparent 60%),
+        linear-gradient(180deg, rgba(255, 255, 255, 0.24) 0%, rgba(255, 255, 255, 0.08) 42%, rgba(0, 0, 0, 0.56) 100%);
       animation: heroPulse 14s ease-in-out infinite alternate;
       pointer-events: none;
     }
@@ -409,6 +407,20 @@
       justify-content: space-between;
       gap: 1rem;
       margin-bottom: 1.25rem;
+      position: relative;
+      padding-left: 20px;
+    }
+
+    .hero-top::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 6px;
+      bottom: 6px;
+      width: 6px;
+      border-radius: 999px;
+      background: linear-gradient(180deg, #ff8a80 0%, #e53935 45%, #cc0000 100%);
+      box-shadow: 0 0 16px rgba(229, 57, 53, 0.45);
     }
 
     .hero-brand {
@@ -1354,8 +1366,8 @@
     .site-footer {
       padding: 3rem 24px 2rem;
       border-top: 2px solid var(--accent);
-      background: #000000;
-      color: var(--text-muted);
+      background: #ffffff;
+      color: #3a3a3a;
       font-size: 0.875rem;
     }
 
@@ -1404,8 +1416,8 @@
     }
 
     .footer-col a {
-      color: #aaa;
-      font-weight: 500;
+      color: #333;
+      font-weight: 600;
     }
 
     .footer-col a:hover {
@@ -1415,11 +1427,11 @@
     .footer-bottom {
       text-align: center;
       padding-top: 1.5rem;
-      border-top: 1px solid var(--border);
+      border-top: 1px solid #ececec;
       max-width: var(--max);
       margin: 0 auto;
       font-size: 0.8125rem;
-      color: #777;
+      color: #666;
     }
 
     /* Back to top */
@@ -1513,7 +1525,31 @@
       }
 
       .hero {
-        padding: 2.5rem 0 3.25rem;
+        padding: 3rem 0 3.25rem;
+      }
+
+      .hero-top {
+        justify-content: flex-start;
+        gap: 0.75rem;
+      }
+
+      .hero-top::before {
+        top: 8px;
+        bottom: 8px;
+      }
+
+      .header-contact-subtle {
+        display: none;
+      }
+
+      .hero-eyebrow {
+        max-width: 100%;
+        overflow-wrap: anywhere;
+      }
+
+      .hero h1 {
+        font-size: 1.95rem;
+        line-height: 1.18;
       }
 
       #capabilities,
@@ -1538,8 +1574,90 @@
         padding-bottom: 2.75rem;
       }
 
+      .logo-img {
+        height: 36px;
+      }
+
+      .hero-logo {
+        width: min(200px, 68vw);
+      }
+
+      .footer-logo {
+        height: 58px;
+      }
+
       .hero-orbit {
         display: none;
+      }
+    }
+
+    @media (max-width: 480px) {
+      :root {
+        --header-h: 64px;
+      }
+
+      .container {
+        padding: 0 16px;
+      }
+
+      .site-header .container,
+      .nav-mobile {
+        padding-left: 16px;
+        padding-right: 16px;
+      }
+
+      .header-inner {
+        gap: 0.5rem;
+      }
+
+      .logo {
+        padding: 0.2rem 0.38rem;
+      }
+
+      .logo-img {
+        height: 32px;
+      }
+
+      .header-actions {
+        gap: 0.45rem;
+        padding: 2px 0;
+      }
+
+      .header-contact {
+        display: none;
+      }
+
+      .menu-toggle {
+        width: 40px;
+        height: 40px;
+      }
+
+      .hero-eyebrow {
+        font-size: 0.67rem;
+        letter-spacing: 0.08em;
+      }
+
+      .hero-top {
+        padding-left: 14px;
+      }
+
+      .hero-top::before {
+        width: 4px;
+      }
+
+      .hero h1 {
+        font-size: 1.05rem;
+        line-height: 1.24;
+      }
+
+      .hero-lead {
+        font-size: 0.86rem;
+        line-height: 1.5;
+      }
+
+      .hero-cta-row .btn {
+        width: 100%;
+        justify-content: center;
       }
     }
   </style>
@@ -1548,13 +1666,8 @@
   <header class="site-header">
     <div class="container header-inner">
       <a href="#home" class="logo" aria-label="Walo Enterprises home">
-        <i class="fa-solid fa-globe" style="color: var(--accent); font-size: 1.15rem;" aria-hidden="true"></i>
-        Walo <span>Enterprises</span>
+        <img src="assets/walo-logo.png" alt="Walo Enterprises" class="logo-img" />
       </a>
-      <div class="header-meta" aria-label="Quick contact">
-        <a href="tel:+61488996473"><i class="fa-solid fa-phone" aria-hidden="true"></i> +61 488 996 473</a>
-        <a href="mailto:papa.diop@waloenterprises.com.au"><i class="fa-solid fa-envelope" aria-hidden="true"></i> papa.diop@waloenterprises.com.au</a>
-      </div>
       <nav class="nav-desktop" aria-label="Primary">
         <a href="#home" data-nav="home">Home</a>
         <a href="#capabilities" data-nav="capabilities">Capabilities</a>
@@ -1587,7 +1700,7 @@
       <div class="container hero-inner">
         <p class="hero-eyebrow"><i class="fa-solid fa-location-dot" aria-hidden="true"></i> Melbourne · Serving partners globally</p>
         <div class="hero-top">
-          <h2 class="hero-brand">Walo <span class="accent">Enterprises</span></h2>
+          <img src="assets/walo-logo.png" alt="Walo Enterprises" class="hero-logo" />
           <a href="#contact" class="btn btn-ghost header-contact-subtle">Contact us</a>
         </div>
         <h1>Walo Enterprises Connecting Opportunities with Integrated IT Services, Consulting, Trade, and Import &amp; Export Solutions</h1>
@@ -1935,8 +2048,8 @@
   <footer class="site-footer">
     <div class="footer-grid">
       <div>
-        <div class="footer-brand">Walo <span>Enterprises</span></div>
-        <p style="margin: 0; max-width: 32rem; line-height: 1.6;">
+        <img src="assets/walo-logo.png" alt="Walo Enterprises" class="footer-logo" />
+        <p style="margin: 0; max-width: 32rem; line-height: 1.6; color: #424242;">
           Connecting opportunities with integrated IT services, consulting, trade, and import &amp; export solutions—from Melbourne to markets worldwide.
         </p>
       </div>
@@ -1960,7 +2073,7 @@
         </ul>
       </div>
     </div>
-    <div class="footer-bottom">© 2025 Walo Enterprises. All rights reserved.</div>
+    <div class="footer-bottom">© 2026 Walo Enterprises. All rights reserved.</div>
   </footer>
 
   <button type="button" class="back-to-top" id="backToTop" aria-label="Back to top">
