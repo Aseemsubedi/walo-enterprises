@@ -1,0 +1,23 @@
+# Serve the static site homepage instead of any broken PHP front controller
+DirectoryIndex index.html index.htm
+
+# If request is for / and index.php would otherwise handle it, prefer HTML
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+  RewriteBase /
+
+  # Force HTTPS
+  RewriteCond %{HTTPS} !=on
+  RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+
+  # Prefer index.html for the site root
+  RewriteRule ^$ index.html [L]
+
+  # If someone hits index.php at root, send them to the static homepage
+  RewriteRule ^index\.php$ /index.html [L,R=302]
+</IfModule>
+
+# Disable PHP execution for static assets if present
+<FilesMatch "\.(html|htm|css|js|png|jpg|jpeg|gif|svg|ico|webp)$">
+  RemoveHandler .php
+</FilesMatch>
